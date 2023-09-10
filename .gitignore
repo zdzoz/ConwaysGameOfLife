@@ -1,0 +1,8 @@
+
+# macos
+.DS_STORE
+
+# idea
+.idea
+cmake-build-release
+cmake-build-debug
