@@ -25,7 +25,7 @@ public:
     ~Window();
 
     inline void* getNativeWindow() {
-        #ifdef APPLE
+        #ifdef __APPLE__
         return bgfx::getMetalLayer(glfwGetCocoaWindow(glfw_window));
         #else
         return nullptr; // FIXME
