@@ -45,12 +45,16 @@ fetchcontent_declare(
 # BIGG Stack
 fetchcontent_makeavailable(imgui glfw3 glm fmt entt)
 
+if (APPLE)
+    set(imgui_apple_srcs ${imgui_SOURCE_DIR}/backends/imgui_impl_metal.*)
+endif ()
+
 file(GLOB imgui_srcs CONFIGURE_DEPENDS
         ${imgui_SOURCE_DIR}/*.cpp
         ${imgui_SOURCE_DIR}/*.h
         ${imgui_SOURCE_DIR}/misc/cpp/imgui_stdlib.*
         ${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.*
-        ${imgui_SOURCE_DIR}/backends/imgui_impl_metal.*
+        ${imgui_apple_srcs}
 )
 add_library(imgui ${imgui_srcs})
 target_include_directories(imgui PUBLIC ${imgui_SOURCE_DIR})
