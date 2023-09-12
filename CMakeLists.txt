@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.26)
-project(conways C CXX OBJC OBJCXX)
+project(conways C CXX)
+
+if (APPLE)
+    enable_language(OBJC OBJCXX)
+endif ()
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
