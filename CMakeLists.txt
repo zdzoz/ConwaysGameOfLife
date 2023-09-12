@@ -59,12 +59,6 @@ file(GLOB imgui_srcs CONFIGURE_DEPENDS
 add_library(imgui ${imgui_srcs})
 target_include_directories(imgui PUBLIC ${imgui_SOURCE_DIR})
 target_link_libraries(imgui glfw)
-#target_compile_definitions(imgui PUBLIC IMGUI_IMPL_METAL_CPP)
-
-#set(METAL_DIR ${CMAKE_SOURCE_DIR}/vendor/metal-cpp)
-#file(GLOB_RECURSE metal_srcs CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/vendor/metal-cpp/*.hpp ${CMAKE_SOURCE_DIR}/vendor/metal-cpp/*.cpp)
-#add_library(metal ${metal_srcs})
-#target_include_directories(metal PUBLIC ${METAL_DIR})
 
 add_subdirectory(vendor)
 add_subdirectory(src)

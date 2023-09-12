@@ -21,6 +21,6 @@ add_subdirectory(shaders)
 target_link_libraries(life bgfx glfw glm::glm imgui fmt::fmt EnTT::EnTT)
 target_compile_definitions(life PRIVATE ${apple_defs} ${windows_defs})
 
-target_include_directories(life PRIVATE ${imgui_dir} window)
+target_include_directories(life PRIVATE ${imgui_dir} window ${bgfx_SOURCE_DIR}/bgfx/include ${bgfx_SOURCE_DIR}/bx/include ${bgfx_SOURCE_DIR}/bimg/include)
 
 target_precompile_headers(life PRIVATE pch.h)
