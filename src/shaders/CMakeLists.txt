@@ -21,7 +21,7 @@ add_library(shader_lib INTERFACE ${verts} ${frags})
 
 # generate all.h file
 add_custom_target(create_all
-        COMMAND ${CMAKE_SOURCE_DIR}/tools/aggregate_shaders ${shader_out}/shaders shaders
+        COMMAND python3 ${CMAKE_SOURCE_DIR}/tools/aggregate_shaders.py ${shader_out}/shaders shaders
         DEPENDS shader_lib ${verts} ${frags}
         VERBATIM
 )
