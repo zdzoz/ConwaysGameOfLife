@@ -3,6 +3,7 @@
 #include <exception>
 #include <functional>
 #include <memory>
+#include <optional>
 #include <thread>
 #include <tuple>
 #include <utility>
