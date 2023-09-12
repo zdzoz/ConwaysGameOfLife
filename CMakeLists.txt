@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.00..3.27)
+cmake_minimum_required(VERSION 3.5...3.26)
 project(conways C CXX)
 
 if (APPLE)
