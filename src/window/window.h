@@ -27,7 +27,10 @@ public:
     inline void* getNativeWindow() {
         #ifdef __APPLE__
         return bgfx::getMetalLayer(glfwGetCocoaWindow(glfw_window));
+        #elif defined(_WIN32)
+        return glfwGetWin32Window(glfw_window);
         #else
+        throw std::runtime_error("Unable to get native window!");
         return nullptr; // FIXME
         #endif
     };

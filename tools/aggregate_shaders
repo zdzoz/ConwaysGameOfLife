@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python3
 
 import sys
 import os
@@ -49,10 +49,3 @@ with open(f'{dir}/{file_name}', "w") as f:
     for file in unique_shaders:
         f.write(f'\tBGFX_EMBEDDED_SHADER({file}),\n')
     f.write('\tBGFX_EMBEDDED_SHADER_END()\n};')
-
-    # bgfx::EmbeddedShader embedded_shaders[] = {
-    #     BGFX_EMBEDDED_SHADER(vs_basic),
-    #     BGFX_EMBEDDED_SHADER(fs_basic),
-    #     BGFX_EMBEDDED_SHADER_END()
-    # };
-
